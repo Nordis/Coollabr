@@ -38,13 +38,13 @@ namespace CoolabrThird.Hubs
 
                 using (var session = MvcApplication.Store.OpenSession())
                 {
-                    var user = session.GetCurrentUser();
+                    // var user = session.GetCurrentUser();
                     var task = new Task();
                     task.Title = newTask.Title;
                     task.Completed = newTask.Completed;
                     task.LastUpdated = DateTime.Now;
-                    task.UserId = user.Id;
-                    task.UserFullName = user.FullName;
+                    // task.UserId = user.Id;
+                    // task.UserFullName = user.FullName;
                     session.Store(task);
                     session.SaveChanges();
                     Clients.taskAdded(task);
