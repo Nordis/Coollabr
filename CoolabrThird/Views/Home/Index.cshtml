@@ -1,0 +1,79 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Coollabr";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section HeadScripts
+{
+    <script src="@Url.Content("~/Scripts/jquery.signalR.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/signalr/hubs")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/knockout.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Coolabr.js")" type="text/javascript"></script>
+}
+
+@section RightHeaderContent
+{
+    <h2 data-bind="visible: incompleteTasks().length != 0" class="task-count">
+        Tasks #<span data-bind="text: incompleteTasks().length">&nbsp</span>
+    </h2>
+}
+
+@section Notifications
+{
+    <span id="error" class="label label-important" style="display: none;"></span>
+    <span id="success" class="label label-success" style="display: none;"></span>
+}
+
+
+<div class="span7 offset2">
+
+    <form id="form-addtask" data-bind="submit: addTask">
+        <textarea id="task-input" class="input-xlarge span4" rows="3" cols="5" data-bind="value: newTaskText"></textarea>
+        <a id="task-submit" class="btn btn-success" href="javascript:void(0)" onclick="$('#form-addtask').submit();">
+        <i class="icon-plus-sign icon-white"></i>
+        Add Task
+        </a>
+        <a id="task-submit-small" class="btn btn-success span2" href="javascript:void(0)" onclick="$('#form-addtask').submit();">
+        <i class="icon-plus-sign icon-white"></i>
+        </a>
+    </form>
+    
+    <div id="task-list-wrapper">
+        <ul id="task-list" data-bind="template: { name: 'taskTemplate', foreach: tasks }, visible: tasks().length > 0">
+        </ul>
+    </div>
+
+    <script type="text/html" id="taskTemplate">
+        <!--Data Template-->
+        <li class="task-item" data-bind="attr: {id: id}">
+            <span class="time" data-bind="text: date"></span>
+            <!--input class="task-complete" type="checkbox" data-bind="checked: completed" /-->
+            
+            <a class="btn btn-mini task-complete" data-bind="visible: !completed(), click: complete">
+                <i class="icon-minus icon-white"></i>
+            </a>
+            
+            <a class="btn btn-mini btn-success task-complete" data-bind="visible: completed, click: complete">
+                <i class="icon-ok icon-white"></i>
+            </a>
+
+            <!--input class="span4 task-content" data-bind="value: title, enable: !completed()" /-->
+            <span class="task-content" data-bind="html: titleAsMd"></span>
+            
+            <a class="btn btn-mini task-edit" href="#" data-bind="click: edit">
+                <i class="icon-arrow-down"></i>
+            </a>
+            
+            <div class="task-edit-wrap clearfix" style="display: none;">
+                <textarea class="input-xlarge span4" rows="3" cols="5" data-bind="value: title, enable: !completed()"></textarea>
+                <a class="btn btn-mini btn-danger task-delete" href="#" data-bind="click: remove">
+                    <i class="icon-trash icon-white"></i>
+                </a>
+            </div>
+        </li>
+    </script>
+
+    <span data-bind="visible: incompleteTasks().length == 0">All tasks are complete</span>
+</div>

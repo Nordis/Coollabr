@@ -1,0 +1,284 @@
+/* clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .clearfix {
+	zoom: 1;
+} /* IE6 */
+*:first-child+html .clearfix {
+	zoom: 1;
+} /* IE7 */
+
+::selection {
+	background: #FFFF9E; /* Safari */
+	}
+::-moz-selection {
+	background: #FFFF9E; /* Firefox */
+}
+
+body
+{
+    background: #eee url('images/bg.png') repeat top left;
+    margin: 0;
+    padding-top: 60px;
+    min-width: 300px;
+    font-family:monospace;
+	text-shadow:0 1px #ddd;
+}
+
+h2 {
+    text-shadow:0 1px #f9f9f9;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+
+/* Custom style for Coolabr */
+.navbar .brand {
+    color: #FBFBFB;
+    font-family: monospace;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    text-shadow: 0 1px #BBBBBB;
+}
+
+.navbar .brand .version {
+    font-size: 14px;
+}
+
+.btn {
+    vertical-align: top;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+}
+
+.nav-collapse {
+    float: left;
+}
+
+.container {
+    position: relative;
+}
+
+#error,
+#success {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+}
+
+.task-count {
+    float: right;
+    display: block;
+    padding: 8px 20px 12px;
+    margin-left: -20px;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1;
+    color: #ffffff;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+#task-list-wrapper {
+    clear: both;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+#task-list {
+    margin-left: 0;
+}
+
+#task-list > li {
+    list-style: none;
+    margin-bottom: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0px 5px 40px 0px #ededed inset;
+	padding: 13px 15px 25px;
+	background-color: #fefefe;
+    position: relative;
+    max-width: 85%;
+    overflow: hidden;
+}
+
+#task-list > li:hover {
+	border: 1px solid #bbb;
+	box-shadow: 0px 7px 40px 0px #e9e9e9 inset;
+}
+
+.time {
+	margin-bottom:10px;
+	display:block;
+}
+
+.task-item {
+    clear: both;
+}
+
+.task-content {
+    margin-bottom: 7px;
+}
+
+#task-submit {
+    float: left;
+    margin-left: 10px;
+}
+
+.task-edit-wrap {
+    margin-top: 10px;
+}
+
+.task-edit {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.task-delete {
+    position: absolute;
+    bottom: 5px;
+    right: 45px;
+}
+
+#form-addtask {
+    width: 95%;
+}
+
+#task-input {
+    float: left;
+}
+
+a.task-complete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#task-submit-small {
+    display: none;
+}
+
+@media (max-width: 979px) {
+    .navbar .nav-collapse {
+        clear: none;
+    }
+}
+
+@media (max-width: 530px) {
+    #task-input,
+    input.task-content {
+        width: 75%;
+        float: left;
+    }
+    #task-submit {
+        display: none;
+    }
+    #task-submit-small {
+        display: block;
+        float: left;
+        width: auto;
+    }
+    .task-delete {
+        float: right;
+    }
+    
+    #error,
+    #success {
+        right: 8px;
+    }
+}
+
+@media (max-width: 420px) {
+    .navbar .brand {
+        font-size: 24px;
+    }
+
+    .navbar .brand .version {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) 
+{
+    #task-input,
+    input.task-content {
+        width: 68%;
+    }
+}

@@ -1,0 +1,17 @@
+﻿@model CoolabrThird.Models.User
+
+@{
+    ViewBag.Title = "Coollabr";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User view</h2>
+
+@using (Html.BeginForm(new { controller = "User", action = "CreateUser" }))
+{
+    @Html.LabelFor(u => u.FullName)
+    @Html.EditorFor(u => u.FullName)<br/><br/>
+    <p>
+		<input type="submit" value="Setup my blog" />
+	</p>
+}

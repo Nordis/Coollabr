@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoolabrThird", "CoolabrThird\CoolabrThird.csproj", "{BAAB3771-D7E2-4090-8991-DD92FE60D220}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoolabrThird.Tests", "CoolabrThird.Tests\CoolabrThird.Tests.csproj", "{6A8AE871-2DEA-404B-A7CB-88AFAABE5B33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coollabr.Utilities", "Coollabr.Utilities\Coollabr.Utilities.csproj", "{F53FD00C-40A5-4E70-9E31-8C4396CE6BAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAAB3771-D7E2-4090-8991-DD92FE60D220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAAB3771-D7E2-4090-8991-DD92FE60D220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAAB3771-D7E2-4090-8991-DD92FE60D220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAAB3771-D7E2-4090-8991-DD92FE60D220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A8AE871-2DEA-404B-A7CB-88AFAABE5B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A8AE871-2DEA-404B-A7CB-88AFAABE5B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A8AE871-2DEA-404B-A7CB-88AFAABE5B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A8AE871-2DEA-404B-A7CB-88AFAABE5B33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F53FD00C-40A5-4E70-9E31-8C4396CE6BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53FD00C-40A5-4E70-9E31-8C4396CE6BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53FD00C-40A5-4E70-9E31-8C4396CE6BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53FD00C-40A5-4E70-9E31-8C4396CE6BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
