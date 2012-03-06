@@ -33,6 +33,9 @@ namespace CoolabrThird.Hubs
                 if (newTask.Title.Length < 5)
                     throw new Exception("Task title too short");
 
+                if (MvcApplication.Store == null)
+                    Caller.reportError("MvcApplication.Store is null");
+
                 using (var session = MvcApplication.Store.OpenSession())
                 {
                     var user = session.GetCurrentUser();

@@ -17,7 +17,7 @@ namespace CoolabrThird
 
     public class MvcApplication : HttpApplication
     {
-        public static IDocumentStore Store { get; protected set; }
+        public static DocumentStore Store { get; set; }
 
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
