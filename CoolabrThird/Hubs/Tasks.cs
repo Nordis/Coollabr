@@ -50,7 +50,7 @@ namespace CoolabrThird.Hubs
             }
             catch (Exception ex)
             {
-                Caller.reportError("Content too short");
+                Caller.reportError(ex.Message);
                 return false;
             }
 
