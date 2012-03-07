@@ -31,10 +31,10 @@ namespace CoolabrThird.Hubs
             try
             {
                 if (newTask.Title.Length < 5)
-                    throw new Exception("Task title too short");
+                    throw new ArgumentException("Task title too short");
 
                 if (MvcApplication.Store == null)
-                    Caller.reportError("MvcApplication.Store is null");
+                    throw new NullReferenceException("DocumentStore not available");
 
                 using (var session = MvcApplication.Store.OpenSession())
                 {
